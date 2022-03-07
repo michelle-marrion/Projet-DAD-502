@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 05 mars 2022 à 19:04
+-- Généré le : lun. 07 mars 2022 à 07:22
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -159,6 +159,8 @@ DROP TABLE IF EXISTS `villearrivee`;
 CREATE TABLE IF NOT EXISTS `villearrivee` (
   `id_ville` int(11) NOT NULL,
   `localite` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_ville`),
+  UNIQUE KEY `villearrivee_pk` (`id_ville`),
   KEY `id` (`id_ville`),
   KEY `association1_fk` (`id_ville`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
